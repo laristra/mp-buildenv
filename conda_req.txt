@@ -1,0 +1,11 @@
+matplotlib
+numpy
+scipy > 1.2
+pytest
+pytest-cov
+sphinx
+pip
+flake8
+pep8
+pylint
+graphviz
