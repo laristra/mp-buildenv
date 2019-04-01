@@ -12,7 +12,7 @@ ENV PATH="/tmp/miniconda/bin:$PATH"
 RUN conda config --set always_yes yes --set changeps1 no
 RUN conda update -q conda
 RUN conda create -q -n test-environment python=3.6 --file conda_req.txt
-RUN source activate test-environment && pip install -r pip_req.txt
+#RUN source activate test-environment && pip install -r pip_req.txt
 
 #RUN mkdir -p ~/.config/matplotlib/
 #RUN echo backend : PDF > ~/.config/matplotlib/matplotlibrc
