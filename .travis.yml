@@ -12,7 +12,7 @@ script:
 
 after_success:
   - BASE_IMAGE="$(sed -n '1s/FROM //p' ./Dockerfile)"
-  - ~/.local/bin/docker-squash -f "${BASE_IMAGE}" "${TRAVIS_REPO_SLUG}:latest"
+  - travis_wait 30 ~/.local/bin/docker-squash -f "${BASE_IMAGE}" "${TRAVIS_REPO_SLUG}:latest"
   - if [[ ${DOCKER_USERNAME} && ${DOCKER_PASSWORD} && ${TRAVIS_PULL_REQUEST} == false && ${TRAVIS_BRANCH} = master ]]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
       docker push "${TRAVIS_REPO_SLUG}:latest";
