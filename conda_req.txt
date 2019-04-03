@@ -9,3 +9,4 @@ flake8
 pep8
 pylint
 graphviz
+cython
