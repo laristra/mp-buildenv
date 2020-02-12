@@ -2,10 +2,10 @@ name: test-environment
 channels:
   - conda-forge
 dependencies:
-  - python = 3.7
-  - scipy >= 1.2
-  - numpy
-  - matplotlib
+  - python == 3.7
+  - scipy == 1.3.1
+  - numpy == 1.17.3
+  - matplotlib == 3.1.2
   - flake8
   - sphinx
   - cython
@@ -15,5 +15,5 @@ dependencies:
   - sphinxcontrib-bibtex
   - pint
   - pip
-  - cvxopt
+  - cvxopt == 1.2.3
   - pyyaml
