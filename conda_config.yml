@@ -17,3 +17,4 @@ dependencies:
   - pip
   - cvxopt == 1.2.3
   - pyyaml
+  - pylint
